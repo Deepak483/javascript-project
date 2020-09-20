@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            DOM manipulations
+        </title>
+        <script type="text/javascript">
+        /* DOM manipulation & getelementId method */
+
+            function fn1()
+            {
+                var str = document.getElementById("text1").value;
+                alert("Value inside the text box is : " +str);
+
+            }
+/* username and password  is using javascript textbox is here */ 
+
+        </script>
+    </head>
+    <body>
+        <input type="text" name="" id="text1" placeholder="username ">
+        <br>
+        <br>
+        <input type="password" name="" id="text2" placeholder="password ">
+        <br>
+        <br>
+
+        
+        <button onclick="fn1()" id="btn1" >Click me</button>
+
+    </body>
+</html>

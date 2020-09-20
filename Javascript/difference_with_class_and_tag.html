@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>difference with class and tag element</title>
+</head>
+<script type="text/javascript">
+/* DOM manipulation & getelementbyid method */
+    function changeStyling()
+    {
+        var element = document.getElementsByClassName("mypara");
+        for (var x = 0; x<element.lenght; x++)
+        {
+            element[x].style.color = "red";
+            
+        }
+    }
+
+</script>
+
+<body>
+    <p id="p1 " class="mypara">This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+    <p class="mypara">This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+    <p class="mypara">This is paragraph 5</p>
+    <br>
+    <button onclick="changeStyling()">Click me</button>
+
+</body>
+</html>

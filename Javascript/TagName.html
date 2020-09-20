@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM manipulation </title>
+	<script type="text/javascript">
+		/* DOM manipulation & getelementbyTagName method */
+		function changeStyling()
+		{
+			var para = document.getelementbyTagName("p");
+			/*
+			para[0].style.fontSize = 30;
+			para[1].style.color = "red";
+			para[2].style.fontWeight = "bold";
+			para[3].style.fontStyle = "italic";
+			para[4].style.backgroundcolor = "blue";
+			*/ 
+			// for loop for accessing all paragraphs 
+			for( var i=0; i<para.length;i++)
+			{
+				para[i].style.fontSize = 22;
+				
+			}
+			
+		}
+
+
+
+	</script>
+</head>
+<body>
+	<p>This is paragraph 1</p>
+	<p>This is paragraph 2</p> 
+	<p>This is paragraph 3</p>
+	<p>This is paragraph 4</p>
+	<p>This is paragraph 5</p>
+	<br>
+	<button onclick="changeStyling()">Click me</button>
+</body>
+</html>

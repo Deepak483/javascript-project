@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM manipulation</title>
+	<script type="text/javascript">
+		/* DOM manipulation & getelementid method */
+		function fn1()
+		{
+			var select =	document.getElementById("selectbox");
+			alert(select.options[select.selectedIndex].value);
+		}
+
+
+
+
+	</script>
+</head>
+
+<body>
+	<select id="selectbox">
+		<option value="Simple Snippets">Simple Snippets</option>
+		<option value="Telusko Learnings">Telusko Learnings</option>
+		<option value="MKBHD">MKBHD</option>
+	</select>
+	<br>
+	<br>
+	<button onclick="fn1()">Click me</button>
+
+</body>
+</html>
