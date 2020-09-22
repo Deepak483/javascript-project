@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular Expression in JS</title>
+</head>
+<script type="text/javascript">
+	/* Regular Expression are used to perform powerful pattern-matching and search- and- replace functions on text!*/
+	function validate()
+	{
+		var username = document.getElementById("uname").value;
+	//	regx = new RegExp("E00","i");
+		var regx = /[0-5]a[6-9][a-c]/ ;
+		if (regx.test(username))
+		{
+			alert("Valid Username");
+			document.getElementById("lblusname").style.visibility = "hidden";
+
+
+		}
+		else
+		{
+			alert("Invalid Username");
+			document.getElementById("lblusname").style.visibility = "visible";
+			return false;
+		}
+	}
+
+</script>
+<body>
+	<form onsubmit="return validate();" action="message.html">
+		<label>Username:
+		<input type="text" name="Username" id="uname" placeholder="Username"></label>
+		<label id="lblusname" style="color:red; visibility: hidden ;">Invalid Username</label>
+		<br>
+		<br>
+		<label>Submit:<button type="submit">Submit</button></label>
+	</form>
+
+</body>
+</html>
