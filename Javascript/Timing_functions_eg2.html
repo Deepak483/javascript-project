@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Timing Functions setInterval and clearInterval eg</title>
+    </head>
+    <script type="text/javascript">
+        /* 
+        1.setTimeout() allows you to execute statements ONCE
+        2.clearTimeout() method clears a timer set with the setTimeout() method
+        3.setInterval() allows you to execute statements REPEATEDLY after an interval
+        4.clearInterval() method clears a time set with the setInterval() method.
+
+        */
+        var seconds = 0;
+        var ID = 0;
+        function printMsg()
+        {
+            document.getElementById("op").innerHTML = "seconds ="+(seconds);
+            seconds++;
+        }
+        function start()
+        {
+            ID = window.setInterval(printMsg,1000);
+        }
+        function stop()
+        {
+            window.clearInterval(ID);
+        }
+
+
+    </script>
+    <body>
+        <button onclick="start()" id="btnAdd" type="button">Start</button>
+        <h2 id="op">seconds = </h2>
+        <button onclick="stop()" id="btnAdd" type="button">Stop</button>
+    </body>
+</html>

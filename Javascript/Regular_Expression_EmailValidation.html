@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Regular Expression in JS4</title>
+    </head>
+    <script>
+        /*Regular expression for email validation*/
+        /*
+            \d - match any digit (equal to [0-9])
+            \w - match any word character (a-z,A-Z,0-9 & _)
+        */ 
+        function validate()
+        {
+            var text = document.getElementById("text1").value;
+
+            var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,8})(.[a-z]{2,8}?)$/;
+            if(regx.test(text))
+            {
+                document.getElementById("lbltext").innerHTML = "Valid";
+                document.getElementById("lbltext").style.color = "green";
+                document.getElementById("lbltext").style.visibility ="visible";
+            }
+            else
+            {
+                document.getElementById("lbltext").innerHTML = "InValid";
+                document.getElementById("lbltext").style.color = "red";
+                document.getElementById("lbltext").style.visibility = "visible";
+            }
+
+        }
+
+    </script>
+    <body>
+        <form action="">
+            <input type="text" id="text1" placeholder="Email">
+            <label for="" id="lbltext" style="color: red; visibility: hidden;">Invalid</label><br><br>
+            <button type="button" onclick="validate()">Submit</button>
+        </form>
+    </body>
+</html>

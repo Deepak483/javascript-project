@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular Expression in JS</title>
+</head><!--1st character has to be between 5-9 | next 8 characters have to be between a-z | last character be 0. -->
+<script type="text/javascript">
+	/* Regular Expression some shortcut for
+		\d - match any digit (equal to [0-9])
+		\w - match any word character (a-z,A-Z,0-9 & _)
+		\s - match whitespace character (eg - spaces & tabs)
+		\t - match a tab only */
+		function validate()
+		{
+			var register = document.getElementById("text1").value;
+			var regx = /^[7-9]\d{9}$/;
+			if (regx.test(register)) 
+			{
+				document.getElementById("lbltext").innerHTML = "Valid";
+				document.getElementById("lbltext").style.visibility = "visible";
+				document.getElementById("lbltext").style.color = "green";
+			}
+			else
+			{
+				document.getElementById("lbltext").innerHTML = "InValid";
+				document.getElementById("lbltext").style.visibility = "visible";
+				document.getElementById("lbltext").style.color = "red";
+			}
+		}
+</script>
+<body>
+	<form>
+		<input  id="text1" type="text" name="Cellphone" placeholder="Cellphone">
+		<label  id="lbltext" style="color:red; visibility: hidden;">Invalid Number</label><br><br>
+		<button type="button" onclick="validate()">Submit</button>
+
+	</form>
+	 	<!-- 
+this is for checking the cellphone number of Indian Mobile Numbers -->  
+</body>
+</html>
