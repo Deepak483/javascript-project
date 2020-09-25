@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Basic Animations 4 Expand and Decrease</title>
+    </head>
+    <script type="text/javascript">
+    /* Take heart and make expand and shrink!.It feels like heart is pumping */
+        var intervalID = 0;
+        var width = 150;
+        var difference = 2;
+        function expand()
+        {
+            clearInterval(intervalID);
+            intervalID =setInterval(ZoomIn,5);
+        }
+        function  shrink()
+        {
+            clearInterval(intervalID);
+            intervalID =setInterval(ZoomOut,5);
+        }
+        function ZoomIn()
+        {
+            if(width<200)
+            {
+                width = width + difference;
+                document.getElementById("img1").style.width = width;
+                console.log(width);       
+            }
+            else
+            {
+                clearInterval(intervalID);
+            }
+        }
+        function ZoomOut()
+        {
+            if(width>100)
+            {
+                width = width - difference;
+                document.getElementById("img1").style.width = width; 
+                console.log(width);
+            }
+            else
+            {
+                clearInterval(intervalID);
+            }
+        }
+    </script>
+    <body>
+        <img onmouseover="expand()"  onmouseout="shrink()" id="img1" src="pictures/heart.jpg" alt="" width="100">
+    </body>
+</html>
