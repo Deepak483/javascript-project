@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Addition of strings</title>
+  </head>
+  <script type="text/javascript">
+    /*  Addition of strings */
+    function AddValues() {
+      var a = document.getElementById('t1').value;
+      var b = document.getElementById('t2').value;
+      document.getElementById('op1').innerHTML = 'Result = ' + (a + b);
+    }
+  </script>
+  <body>
+    <form>
+      <input type="text" id="t1" deepakholder="Text1" />
+      <br /><br />
+      <input type="text" id="t2" deepakholder="Text2" />
+      <br /><br />
+      <button onclick="AddValues()" type="button" id="op">ADD</button><br />
+      <h2 id="op1">Result =</h2>
+    </form>
+  </body>
+</html>

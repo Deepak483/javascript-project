@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Accordion in jQuery-UI</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2>Accordion Example</h2>
+        <div id="panels">
+            <h3>Telusko Learning</h3>
+            <p>Telusko learnings is one of the largest tech educational youtube channel in India.Firstly I found this channel when I wanted to learn python programming then I check all the videos of this channel and it has best programming videos like Java,Node.js,Python,Git & Github basics videos.</p>
+            <h3>Simple Snippets</h3>
+            <p>Simple Snippets is an upcoming tech educational channel with more than 30k subsriber.I like this channel very much .It is one of my favourite channel. The way Tanmay Sakpal teaches seems very easy to understand.</p>
+            <h3>MKBD</h3>
+            <p>This is Tanmay Sakpal favourite channel.
+                But now I don't like this channel maybe in future might I like this channel.
+            </p>
+
+        </div>
+        
+    </body>
+    
+    <script type="text/javascript" src="jquery/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.js" ></script>
+    <script>
+        $(document).ready(function(){
+            
+            $("#panels").accordion({
+
+                collapsible:true ,
+                event:"click" ,
+                animate:300 ,
+                active:1 ,
+                heightStyle:true ,
+                icons:{header:"ui-icon-plus" , activeHeader:"ui-icon-minus"}
+
+
+
+            });
+          
+        });
+    </script>
+</html>
